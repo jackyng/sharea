@@ -1,17 +1,19 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#group :development, :test do
- 	#gem 'sqlite3'
+group :development do
+ 	gem 'sqlite3'
   #gem 'yaml_db'
  	#gem 'mysql2'
-#end
-group :production, :development, :test do
+end
+group :production do
 	gem 'pg', '0.12.2'
+  gem 'rails_12factor', '0.0.2'
 end
 
 gem 'json'
