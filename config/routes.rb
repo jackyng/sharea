@@ -1,4 +1,8 @@
 Sharea::Application.routes.draw do
+  resources :expenses
+
+  resources :expense_splits
+
   resources :users
 
   root to: "users#index"

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @expense_split.user_id %>
+</p>
+
+<p>
+  <strong>Expense:</strong>
+  <%= @expense_split.expense_id %>
+</p>
+
+<p>
+  <strong>Amount owe:</strong>
+  <%= @expense_split.amount_owe %>
+</p>
+
+<p>
+  <strong>Amount pay:</strong>
+  <%= @expense_split.amount_pay %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @expense_split.completed %>
+</p>
+
+<%= link_to 'Edit', edit_expense_split_path(@expense_split) %> |
+<%= link_to 'Back', expense_splits_path %>

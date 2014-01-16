@@ -1,0 +1,35 @@
+<h1>Listing expense_splits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Expense</th>
+      <th>Amount owe</th>
+      <th>Amount pay</th>
+      <th>Completed</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expense_splits.each do |expense_split| %>
+      <tr>
+        <td><%= expense_split.user_id %></td>
+        <td><%= expense_split.expense_id %></td>
+        <td><%= expense_split.amount_owe %></td>
+        <td><%= expense_split.amount_pay %></td>
+        <td><%= expense_split.completed %></td>
+        <td><%= link_to 'Show', expense_split %></td>
+        <td><%= link_to 'Edit', edit_expense_split_path(expense_split) %></td>
+        <td><%= link_to 'Destroy', expense_split, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expense split', new_expense_split_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @expense.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @expense.description %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @expense.deadline %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @expense.owner_id %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @expense.completed %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @expense.event_id %>
+</p>
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>
